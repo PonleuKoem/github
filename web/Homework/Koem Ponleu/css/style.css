@@ -1,0 +1,26 @@
+    body{
+    font-family: serif, arial;
+  }
+  tr, td{    
+    vertical-align: top;
+    width: 9%;
+    height: 130px;
+  }
+  th{
+    text-transform: capitalize;
+    vertical-align: bottom;
+    height: 10%;
+  }
+  .bg-color{
+    background-color: #efefef;
+  }
+  .row{
+    margin: 0 120px;
+    float: center;
+  }
+  .center{
+    float: center;
+  }
+  .red{
+    color: red;
+  }

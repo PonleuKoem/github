@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<img id="myimg" src="1.PNG" alt="" onclick="change()">
+	<h1 onclick="checkMinutes()">jjj</h1>
+	<script type="text/javascript">
+		function change(){
+			x=document.getElementById("myimg");
+			/*if (x.src.match("1.PNG")) {
+				x.src="2.PNG";
+
+			}
+			else{
+				x.src="1.PNG"
+			}*/
+
+		}
+		setTimeout(checkMinutes,1000);
+
+function checkMinutes(){
+  var now = new Date().getMinutes();
+  if (now > checkMinutes.prevTime){
+    // do something
+    console.log('nextminute arrived');
+  }
+  checkMinutes.prevTime = now;
+  setTimeout(checkChange,1000);
+}
+	</script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+/* ========= html element style ================ */
+    * {
+        box-sizing: border-box;
+        font-family: "Battambang";
+    }
+    body{
+        background-image: url(../images/bg.jpg);
+        font-family: "Lucida Sans", sans-serif;
+    }
+    /* ========= partern  style ================ */
+    .inline{
+        display: inline;
+    }
+    .float-right{
+        float: right;
+    }
+    .float-left{
+        float: left;
+    }
+    .fa-home:before{content:"\f015";}
+
+    .pull-left{
+        text-align: left;
+    }
+    .pull-right{
+        text-align: right;
+    }
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+    }
+    .panel {
+      margin-bottom: 20px;
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+              box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    }
+    .page-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0.15);
+    }
+    .center{
+        vertical-align: center;
+        text-align: center;
+    }
+    .blue{
+        color: #33b5e5;
+    }
+    .md-hidden{
+        display: none;
+    }
+/* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+/* ========= End partern  style ================ */
+
+/* ========= element style ================ */
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+.header {
+    color: #ffffff;}
+.header img{
+    width: 100%;
+}
+/* ========= Menu style ================ */
+    .menu{
+        text-align: center;
+        background-color: #33b5e5;
+    }
+    .menu ul {
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+    a.mymenu{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 19px;
+    }
+    .menu li {
+        padding: 18px;
+        margin-bottom: 7px;
+        color: #ffffff;
+        display: inline;
+    }
+    .menu li:hover {
+        background-color: #33b5e5;
+        color: red;
+    }
+    .menu li a:hover{
+        color: #886300;
+    }
+/* ========= End Menu style ================ */
+
+/* ========= Contents style ================ */
+    
+    .main-content{
+            padding: 30px;
+    }
+    .content{
+        margin-top: 25px;
+        background-color: #ffffff;
+    }
+    .news{
+        padding: 0;
+        border-bottom: 1px solid #33b5e5;
+    }
+    .news-description{
+        line-height: 27px;
+        text-align: justify;
+        clear: both;
+    }
+    
+    /* .news-content{
+        height: 60px;
+        line-height: 30px;
+        overflow: hidden;
+    } */
+    .news-content{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-height: 27px;
+        font-size: 18px;
+        margin-top: -12px;
+        text-align: justify;
+    }
+    .date-news{
+        font-size: 12px;
+        color: blue;
+        vertical-align: top;
+    }
+    a.news-title{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-align: justify;
+        color: #0099cc;
+    }
+    a.news-title:hover{
+        color: #3d81b3;
+    }
+    .aside-news-title{   
+        overflow: auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        color: #3d819a;
+        text-align: justify;
+    }
+    .aside-news-title:hover{        
+        text-align: justify;
+        color: #33b5e5;
+    }
+    .news-img{
+        padding: 10px;
+        text-align: center
+    }
+/* =================== Aside Style ========================= */
+    .sidebar{
+        padding: 0px;
+        background-color: white;
+        margin: 11px 0 0 0;
+      }
+    .aside {
+        background-color: #33b5e5;
+        color: #ffffff;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    .countryside{
+        background-color: #ffffff;
+    }
+    .popul{
+        padding: 5px 0 0 0;
+        margin-bottom: 0;
+        border: 1px solid red;
+        border-width: 0px 0px 1px 0px;
+    }
+    .news-img-grid{
+        padding: 23px 0;
+
+    }
+    .news-img-grid:hover{
+        width: 102%;
+        color: red;
+    }
+    .related-img{
+        
+    }
+    .related-img:hover{
+        width: 105%; 
+    }
+/* =================== Aside Style ========================= */
+    .copywrite {
+        background-color: #0099cc;
+        color: #ffffff;
+        font-size: 12px;
+        padding: 15px;
+    }
+    .footer{
+        background-color: #3d819a;
+        color: #ffffff;
+        text-align: justify;
+        font-size: 12px;
+        padding: 15px;
+    }
+    .title-aside{
+        padding: 0;
+        margin: 0;
+    }
+    .footer img{
+        width: 100%;
+    }
+    .footer iframe{
+        width: 100%;
+        height: 100%;
+    }
+    .form-validate{
+        padding: 15px;
+        background-color: #ffffff;
+    }
+    .read-more{
+        font-size: 15px;
+        float: right;
+    }
+    /* This is Pagination Style */
+    .pagination {
+        display: inline-block;
+        float: right;
+    }
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+    }
+
+    .pagination a.active {
+        background-color: #33b5e5;;
+        color: white;
+        border: 1px solid #33b5e5;;
+    }
+
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+    /* End Pagination */
+    .image-c{
+    }
+    .name-c{
+        margin-bottom: -20px;
+    }
+    .contact-c{
+        background-color: #33b5e5;
+        color: #f7f9f8;
+        padding: 10px;
+        max-height: 250px;
+        min-height: 250px;
+    }
+    .contact-c:hover{
+        background-color: #2a353a;
+    }
+    .btn-f{
+        width: 70%;
+        padding: 12px;
+        margin-bottom: 12px;
+        background-color: #3b5998;
+        border: none;
+    }
+    .btn-g{
+        width: 70%;
+        padding: 12px;
+        margin-bottom: 12px;
+        background-color: #55acee;
+        border: none;
+    }
+    .btn-t{
+        width: 70%;
+        padding: 12px;
+        margin-bottom: 12px;
+        background-color: #dc4e41;
+        border: none;
+    }
+    .btn-f:hover{
+        background-color: #9eb5e4;
+    }
+    .btn-g:hover{
+        background-color: #429ee4;
+    }
+    .btn-t:hover{
+        background-color: #dc4e11;
+    }
+    .input-c{
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
+    input[type=submit]{
+        background-color: #0099cc;
+        border: none;
+        color: #ffffff;
+    }
+    input[type=submit]:hover{
+        background-color: #3d819a;
+        border: none;        
+    }
+    .service-des{
+        text-align: justify;
+    }
+    .service-c{
+        background-color: #33b5e5;
+        color: #f7f9f8;
+        padding: 10px;
+        max-height: 400px;
+        min-height: 400px;
+    }
+    .service-div{
+        background-color: #3d819a;
+        min-height: 400px;
+        max-height: 400px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    .service-div:hover{
+        background-color: #2a353a;
+    }
+    .img-service{
+        background: url(../images/minister.jpg);
+        background-size: 100%;
+    }
+    .description-c{
+        text-align: justify;
+    }
+    table.responsive-table{
+    }
+    table.responsive-table, tr, th, td{
+        border-collapse: collapse;
+        border: 1px solid blue;
+    }
+    table.responsive-table th{
+        width: 20%;
+        padding: 10px;
+    }
+    table.responsive-table td{
+        width: 80%;
+        padding: 10px;
+    }
+    .ul-des>li{
+        line-height: 27px;
+    }
+    .img-aside-pop{
+        padding: 0;
+    }

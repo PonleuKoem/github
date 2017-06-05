@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Battambang&subset=khmer' rel='stylesheet' type='text/css'>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Battambang";
+}
+body{
+    background-image: url(images/bg.jpg);
+    font-family: 'Battambang';font-size: 22px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.header {
+    color: #ffffff;}
+.header img{
+    width: 100%;
+}
+.menu{
+    text-align: center;
+    background-color: #886300;
+}
+.menu ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+a.mymenu{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 19px;
+}
+.menu li {
+    padding: 18px;
+    margin-bottom: 7px;
+    color: #ffffff;
+    display: inline;
+}
+.menu li:hover {
+    background-color: #ffffff;
+    color: red;
+}
+.menu li a:hover{
+    color: #886300;
+}
+.news{
+}
+.content{
+    background-color: #ffffff; 
+    margin-top: 32px;
+}
+.date-news{
+    font-size: 12px;
+    color: blue;
+    vertical-align: top;
+}
+/* .news-content{
+    height: 60px;
+    line-height: 30px;
+    overflow: hidden;
+} */
+.news-content{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 27px;
+    font-size: 18px;
+    margin-top: -12px;
+    text-align: justify;
+  }
+  a.news-title{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+  }
+  .sidebar{
+    padding: 0px;
+  }
+.aside {
+    background-color: #33b5e5;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.copywrite {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+.footer{
+    background-color: #886300;
+    color: #ffffff;
+    text-align: justify;
+    font-size: 12px;
+    padding: 15px;
+}
+.footer img{
+    width: 100%;
+}
+.footer iframe{
+    width: 100%;
+    height: 100%;
+}
+.form-validate{
+    padding: 15px;
+    background-color: #ffffff;
+}
+.read-more{
+    font-size: 15px;
+    float: right;
+}
+/* This is Pagination Style */
+.pagination {
+    display: inline-block;
+    float: right;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+/* End Pagination */
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+  .col-sm-1 {width: 8.33%;}
+  .col-sm-2 {width: 16.66%;}
+  .col-sm-3 {width: 25%;}
+  .col-sm-4 {width: 33.33%;}
+  .col-sm-5 {width: 41.66%;}
+  .col-sm-6 {width: 50%;}
+  .col-sm-7 {width: 58.33%;}
+  .col-sm-8 {width: 66.66%;}
+  .col-sm-9 {width: 75%;}
+  .col-sm-10 {width: 83.33%;}
+  .col-sm-11 {width: 91.66%;}
+  .col-sm-12 {width: 100%;}
+
+  .news-content{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 20px;
+    font-size: 12px;
+        text-align: justify;
+  }
+  a.news-title{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    margin-top: -50px;
+        text-align: justify;
+  }
+  .read-more{
+    font-size: 15px;
+    float: right;
+    margin-bottom: -15px;
+}
+.sidebar{
+    padding: 15px;
+  }
+.pagination {
+    display: inline-block;
+    float: right;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 4px 8px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+.block-pagination{
+  text-align: center;
+  vertical-align: middle;
+}
+
+}
+@media only screen and (max-width: 460px) {
+    
+}
+</style>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="header">
+  <img src="images/cover2.jpg" alt="">
+</div>
+
+<div class="row">
+
+<div class="col-12 menu">
+  <ul>
+    <li> 
+        <a href="#" class="mymenu">HOME</a>
+    </li>
+    <li> 
+        <a href="#" class="mymenu">Document</a>
+    </li>
+    <li> 
+        <a href="#" class="mymenu">gallery</a>
+    </li>
+    <li>
+        <a href="#" class="mymenu">ABOUT US</a>
+    </li>
+    <li>
+        <a href="#" class="mymenu">Contact us</a>
+    </li>
+  </ul>
+</div>
+<div class="col-9 col-sm-12 content">
+    <div class="col-12 col-sm-12 news-sch">
+    <div>
+        <h3 style="color: #886300;">Scholarship</h3>
+        <hr>
+    </div>
+</div>
+  <div class="news col-12 col-sm-6">
+      <div class="img-news col-2 col-sm-12">
+
+          <a href="#"><img src="images/d1.jpg" alt="" width="100%"></a>
+          <!-- <p class="date-news">April-02-2017</p> -->
+      </div>
+      <div class="description col-10 col-sm-12">
+            <h4><a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</a><!-- <span style="float: right;"><a href="#">Read More</a></span> --></h4>
+            
+          <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="" class="read-more">Read More &raquo;</a>
+      </div>
+      <div class="col-10 col-sm-12">
+        <hr>
+      </div>
+  </div>
+  <div class="news col-12 col-sm-6">
+      <div class="img-news col-2 col-sm-12">
+
+          <a href="#"><img src="images/d1.jpg" alt="" width="100%"></a>
+          <!-- <p class="date-news">April-02-2017</p> -->
+      </div>
+      <div class="description col-10 col-sm-12">
+            <h4><a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</a><!-- <span style="float: right;"><a href="#">Read More</a></span> --></h4>
+            
+          <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="" class="read-more">Read More &raquo;</a>
+      </div>
+      <div class="col-10 col-sm-12">
+        <hr>
+      </div>
+  </div>
+  <div class="news col-12 col-sm-6">
+      <div class="img-news col-2 col-sm-12">
+
+          <a href="#"><img src="images/d1.jpg" alt="" width="100%"></a>
+          <!-- <p class="date-news">April-02-2017</p> -->
+      </div>
+      <div class="description col-10 col-sm-12">
+            <h4><a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</a><!-- <span style="float: right;"><a href="#">Read More</a></span> --></h4>
+            
+          <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="" class="read-more">Read More &raquo;</a>
+      </div>
+      <div class="col-10 col-sm-12">
+        <hr>
+      </div>
+  </div>
+  <div class="news col-12 col-sm-6">
+      <div class="img-news col-2 col-sm-12">
+
+          <a href="#"><img src="images/d1.jpg" alt="" width="100%"></a>
+          <!-- <p class="date-news">April-02-2017</p> -->
+      </div>
+      <div class="description col-10 col-sm-12">
+            <h4><a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</a><!-- <span style="float: right;"><a href="#">Read More</a></span> --></h4>
+            
+          <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="" class="read-more">Read More &raquo;</a>
+      </div>
+      <div class="col-10 col-sm-12">
+        <hr>
+      </div>
+  </div>
+  <div class="news col-12 col-sm-6">
+      <div class="img-news col-2 col-sm-12">
+
+          <a href="#"><img src="images/d1.jpg" alt="" width="100%"></a>
+          <!-- <p class="date-news">April-02-2017</p> -->
+      </div>
+      <div class="description col-10 col-sm-12">
+            <h4><a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</a><!-- <span style="float: right;"><a href="#">Read More</a></span> --></h4>
+            
+          <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="" class="read-more">Read More &raquo;</a>
+      </div>
+      <div class="col-10 col-sm-12">
+        <hr>
+      </div>
+  </div>
+  <div class="news col-12 col-sm-6">
+      <div class="img-news col-2 col-sm-12">
+
+          <a href="#"><img src="images/d1.jpg" alt="" width="100%"></a>
+          <!-- <p class="date-news">April-02-2017</p> -->
+      </div>
+      <div class="description col-10 col-sm-12">
+            <h4><a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</a><!-- <span style="float: right;"><a href="#">Read More</a></span> --></h4>
+            
+          <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="" class="read-more">Read More &raquo;</a>
+      </div>
+      <div class="col-10 col-sm-12">
+        <hr>
+      </div>
+  </div>
+  <div class="news col-12 col-sm-6">
+      <div class="img-news col-2 col-sm-12">
+
+          <a href="#"><img src="images/d1.jpg" alt="" width="100%"></a>
+          <!-- <p class="date-news">April-02-2017</p> -->
+      </div>
+      <div class="description col-10 col-sm-12">
+            <h4><a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.</a><!-- <span style="float: right;"><a href="#">Read More</a></span> --></h4>
+            
+          <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="" class="read-more">Read More &raquo;</a>
+      </div>
+      <div class="col-10 col-sm-12">
+        <hr>
+      </div>      
+  </div> 
+  <div class="col-12 col-sm-12 block-pagination">
+    <div class="pagination">
+      <a href="#">&laquo;</a>
+      <a href="#"  class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">&raquo;</a>
+    </div>
+  </div>
+</div>  
+
+<div class="col-3 col-sm-12 right">
+  <div class="col-12 col-sm-6 sidebar">
+    <div class="aside">
+      <h2>Minister of Cambodia</h2><hr>
+    <a href=""><img src="images/minister.jpg" alt="" width="100%"></a>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 sidebar">
+    <div class="aside">
+      <h2>What?</h2>
+      <hr>
+      <iframe width="100%" height="" src="https://www.youtube.com/embed/9OaeQn3JrH8" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 sidebar">
+    <div class="aside">
+      <h2>Documentation</h2><hr>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="footer col-12">
+    <div class="col-4 col-sm-12">
+        <h3>About Us</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="" class="read-more">Read More &raquo;</a>
+    </div>
+    <div class="col-4 col-sm-12 ">
+        <h3>Map</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.0082476821085!2d104.84345441405384!3d11.551265747573431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31094fd553400b85%3A0xd5336e32f60085ec!2sPhnom+Penh+International+Airport!5e0!3m2!1sen!2skh!4v1491932975165" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="col-4 col-sm-12 ">
+        <h3>Contact Us</h3>
+        <address>
+            Facebook: SLS<br>
+            Phone Number: 096 44 79 456
+        </address>
+        
+            <div class="fb-like" data-href="https://www.facebook.com/groups/847695075379498/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    </div>
+</div>
+<div class="copywrite col-12">
+  <p>Copywrite HRD Center</p>
+</div>
+
+</body>
+</html>

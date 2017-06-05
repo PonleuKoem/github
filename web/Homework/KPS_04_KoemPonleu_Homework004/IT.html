@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css.css">
+    <style>
+        .center{
+            text-align: center;
+            vertical-align: middle;
+        }
+        .color1{
+            background-color: #b76de8;
+        }
+        .color2{
+            background-color: #dc3434;
+        }
+        .color3{
+            background-color: #f59696;
+        }
+        .color4{
+            background-color: #c30c9e;
+        }
+        .box{
+            height: 100px;
+        }
+        .modal-dialog{
+          width: 1000px;
+        }
+        .thum{
+          padding: 0;
+          margin-bottom: -20px;
+        }
+        .inline{
+          display: inline;
+        }
+    </style>
+    <script>
+    </script>
+    <script type="text/javascript" src="script.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+</head>
+
+<body onload="">
+
+    <div id="login-overlay" class="modal-dialog" style="width: 1000px">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="pull-left" id="">Internet Payment</h4>
+              <h5 class="pull-right" id="">Copyright © 2017 · KOEM Ponleu</h5>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-9">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-6 thum">
+                          <div class="panel price panel-red">
+                            <div class="panel-heading  text-center">
+                            <h3>Start Time:</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                              <p class="lead" style="font-size:40px"><strong id="st">00:00</strong></p>
+                            </div>                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-6 thum">
+                          <div class="panel price panel-blue">
+                            <div class="panel-heading arrow_box text-center">
+                            <h3>Stop Time:</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                              <p class="lead" style="font-size:40px"><strong id="stp">00:00</strong></p>
+                            </div>                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-6 thum">
+                          <div class="panel price panel-green">
+                            <div class="panel-heading arrow_box text-center">
+                            <h3>Duration:</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                              <p class="lead" style="font-size:40px"><strong id="mn">Minute</strong></p>
+                            </div>                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-6 thum">
+                          <div class="panel price panel-grey">
+                            <div class="panel-heading arrow_box text-center">
+                            <h3>Total Payment</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                              <p class="lead" style="font-size:40px"><strong id="result">Riel</strong></p>
+                            </div>
+                          </div>
+                        </div> 
+                  </div>
+                  <div class="col-md-3">  
+                    <div class="col-md-12 well">
+                      <p class="lead center"><span class="text-success">APPLY RULES</span></p>
+                      <ul class="list-unstyled center" style="line-height: 2">
+                          <li><span class="text-success"></span> 00 minute -> 15 minutes: 500R</li>
+                          <li><span class="text-success"></span> 16 minutes -> 30 minutes: 700R</li>
+                          <li><span class="text-success"></span> 31 minutes -> 60 minutes: 1500R</li>
+                      </ul>  
+                    </div> 
+                    <div class="col-md-12 well">
+                      <p class="lead center" style="font-size:18px; color: #d07335;"><strong id="msg">Click "Start" to play</strong></p>
+                  </div>                   
+                  </div>
+              </div>
+              <div class="well col-md-12 hide" id="hide">
+                <ul class="list-unstyled" style="line-height: 2; display: inline;">
+                    <div class="col-md-4"><li class="inline"><span class="text-success" id="startResult"></span></li></div>
+                    <div class="col-md-4"><li class="inline"><span class="text-success" id="stopResult"></span></li></div>
+                    <div class="col-md-4"><li class="inline"><span class="text-success" id="minuteResult"></span></li></div>
+                    <div class="col-md-4"><li class="inline"><span class="text-success" id="payResult"></span></li></div>
+                </ul>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <div class="col-md-12">
+              <input type="button" class="btn btn-lg btn-warning" value="Start" id="btn" onclick="start()" style="width: 100%">
+            </div>
+          </div>
+      </div>
+    </div>
+</body>
+</html>

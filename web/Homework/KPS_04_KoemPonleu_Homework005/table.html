@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		tr{
+			background-color: #fff;
+		}
+		.thump{
+			height: 90px;
+		}
+	</style>
+
+	<script type="text/javascript" src=script.js></script>
+	<link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+	<div class="container well" style="margin-top: 20px;">
+		<div class="col-md-12"><h1>Student Information</h1></div>
+
+		<!-- +++++++++++++++++++++++Form+++++++++++++++++++++ -->
+		<div class="form col-md-12 well">		
+			<form action="">	
+				<div class="col-md-6 thump">
+					<span>Student Name: </span>
+					<input class="form-control" type="text" placeholder="Name" id="name" onblur="n_validate()">
+					<p id="name_validate" class="pull-right text-danger"></p>
+				</div>				
+				<div class="col-md-6 thump">
+					<span>Gender: </span> 
+					<select class="form-control" name="gender" id="gender">
+						<option value="Femal">Femal</option>
+						<option value="Male">Male</option>
+					</select>
+				</div>
+				<div class="col-md-6 thump">
+					<span>School: </span><input class="form-control" type="text" placeholder="School" id="school" onblur="sch_validate()">
+					<p id="invalid-school" class="pull-right text-danger"></p>
+				</div>
+				<div class="col-md-6 thump">
+					<span>Contact: </span> 
+					<input class="form-control" type="text" placeholder="Contact" id="contact" onblur="ph_validate()">
+					<p id="invalid-phone" class="pull-right text-danger"></p>
+				</div>
+				<div class="col-md-12 thump  pull-right">
+					<input class="btn btn-warning" type="button" id="myBtn" onclick="myInsert()" value="ADD Record">
+				</div>
+			</form>			
+			<div class="error text-danger" id="error"></div>
+		</div>
+		<!-- +++++++++++++++++++++++End Form+++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++Table+++++++++++++++++++++ -->
+		<div class="col-md-12 well">
+			<h3>Please input to add more rows</h3>
+			<table class="table table-responsive table-bordered">
+				<thead>
+					<tr style="background-color: #b96b00; color: #fff;">
+						<th>Nº</th>
+						<th>Student Name</th>
+						<th>Gender</th>
+						<th>School</th>
+						<th>Contact</th>
+					</tr>
+				</thead>
+				<tbody id="mytable">
+					
+				</tbody>
+			</table>
+			<h4><span id="records" style="color: red">0 </span><span> Records </span><span style="color: red" id="row_select_to" class="pull-right"></span></h4>			
+			<button onclick="removeRow()" class="btn btn-warning">Remove</button>
+			<button onclick="deleteAll()" class="btn btn-warning">Remove all</button>
+		</div>
+		<!-- +++++++++++++++++++++++End Table+++++++++++++++++++++ -->
+
+	</div>
+</body>
+</html>

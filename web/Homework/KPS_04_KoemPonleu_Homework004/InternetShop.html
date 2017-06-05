@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+</head>
+<body>
+	<h2 id="st">s</h2>
+	<h2 id="stp">s</h2>
+	<span id="mn"> </span><span> Minutes</span>
+	<h2 id="result"></h2>
+	<input type="button" id="btn" onclick="start()" value="Start"></input>
+	
+	<script>
+	function start(){
+		var st = document.getElementById("st");
+		var stp = document.getElementById("stp");
+		var mn = document.getElementById("mn");
+		var btn = document.getElementById("btn");
+		var result = document.getElementById("result");
+
+
+		var today = new Date();
+		/*var s = today.getSeconds();
+		var mn = today.getMinutes();
+		var h = today.getHours();
+		var y = today.getFullYear();
+		var m = today.getUTCMonth();
+		var d = today.getDay();
+		var tl = +"m"+", "+y+" "+h+":"+mn+":"+s;*/
+		var startdate = new Date();
+		var i = startdate;
+		if(btn.addEventListener && btn.value=="Start") {
+
+			st.innerHTML = i;
+			
+			var intervalListener = setInterval(function() {
+		  	
+		        var enddate = new Date();
+				var j = enddate;
+				stp.innerHTML = j;
+				//mn.innerHTML = ((j - i)/1000)/60+"m";	
+				btn.value="Stop";
+
+				// +++++++++++++++++++++++++++++++++++++++
+				if (btn.addEventListener && btn.value=="Stop") {
+					btn.addEventListener("click", function() {
+				        clearInterval(intervalListener);
+						btn.value="Clear";
+						mn.innerHTML=total;
+						if(total<=15){
+							result.innerHTML = 500+" Riel";
+						}
+						else if(total<=30){
+							result.innerHTML = 700+" Riel";
+						}
+
+
+						// +++++++++++++++++++++++++++++++++++++++
+						if (btn.addEventListener && btn.value=="Clear") {
+							btn.addEventListener("click", function() {
+						        window.location.reload(); //reload page
+					    	}, false);					
+						}
+				    }, false);					   
+				}				
+		    }, 1000);
+
+		    			
+		}
+	}
+	function checkTime(i) {
+	    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		    return i;
+		}
+	/*var start = new Date().getTime();
+
+	for (i = 0; i < 50000; ++i) {
+	// do something
+	}
+
+	var end = new Date().getTime();
+	var time = end - start;
+	alert('Execution time: ' + time);*/
+		/*var birthday = new Date("4/1/1995");  
+var today = new Date();  
+var years = today.getFullYear() - birthday.getFullYear();  
+
+// Reset birthday to the current year.  
+birthday.setFullYear(today.getFullYear());  
+
+// If the user's birthday has not occurred yet this year, subtract 1.  
+if (today < birthday)  
+{  
+    years--;  
+}  
+document.write("You are " + years + " years old.");  
+
+// Output: You are <number of years> years old.  */
+	</script>
+</body>
+</html>

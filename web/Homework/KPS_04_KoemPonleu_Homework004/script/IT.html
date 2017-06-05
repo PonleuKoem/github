@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+        .center{
+            text-align: center;
+            vertical-align: middle;
+        }
+        .color1{
+            background-color: #b76de8;
+        }
+        .color2{
+            background-color: #dc3434;
+        }
+        .color3{
+            background-color: #f59696;
+        }
+        .color4{
+            background-color: #c30c9e;
+        }
+        .box{
+            height: 100px;
+        }
+        .modal-dialog{
+          width: 100%;
+        }
+        .thum{
+          padding: 0;
+          margin-bottom: -20px;
+        }
+        .inline{
+          display: inline;
+        }
+        
+        /* #msg {
+            position: absolute;
+            right: 0;
+            -webkit-animation: mymove 5s infinite; Chrome, Safari, Opera
+            animation: mymove 5s infinite;
+        }
+        
+        Chrome, Safari, Opera
+        @-webkit-keyframes mymove {
+            70% {right: 800px;}
+        }
+        
+        Standard syntax
+        @keyframes mymove {
+            50% {right: 50px;}
+        } */
+        .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: static;}
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css.css">
+    <script>
+    </script>
+    <script type="text/javascript" src="script.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+</head>
+
+<body onload="">
+
+    <div id="login-overlay" class="modal-dialog" style="width: 60%">
+
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="pull-left">Internet Payment</h4>
+              <h5 class="pull-right" id="">Copyright © 2017 · KOEM Ponleu</h5>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-9 col-xs-12">
+                        <div class="col-xs-12 col-md-6 thum">
+                          <div class="panel price panel-red">
+                            <div class="panel-heading  text-center">
+                            <h3>Start Time:</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                              <p class="lead" style="font-size:40px"><strong id="st">00:00</strong></p>
+                            </div>                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-6 thum">
+                          <div class="panel price panel-blue">
+                            <div class="panel-heading arrow_box text-center">
+                            <h3>Stop Time:</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                              <p class="lead" style="font-size:40px"><strong id="stp">00:00</strong></p>
+                            </div>                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-6 thum">
+                          <div class="panel price panel-green">
+                            <div class="panel-heading arrow_box text-center">
+                            <h3>Duration:</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                              <p class="lead" style="font-size:40px"><strong id="mn">Minute</strong></p>
+                            </div>                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-6 thum">
+                          <div class="panel price panel-grey">
+                            <div class="panel-heading arrow_box text-center">
+                            <h3>Total Payment</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                              <p class="lead" style="font-size:40px"><strong id="result">Riel</strong></p>
+                            </div>
+                          </div>
+                        </div> 
+                  </div>
+                  <div class="col-md-3 hidden-sm">  
+                    <div class="col-md-12 well">
+                      <p class="lead center"><span class="text-success">APPLY RULES</span></p>
+                      <ul class="list-unstyled center" style="line-height: 2">
+                          <li><span class="text-success"></span> 00 minute -> 15 minutes: 500R</li>
+                          <li><span class="text-success"></span> 16 minutes -> 30 minutes: 700R</li>
+                          <li><span class="text-success"></span> 31 minutes -> 60 minutes: 1500R</li>
+                      </ul>  
+                    </div> 
+                    <div class="col-md-12 well">
+                      <p class="lead center" style="font-size:18px; color: #d07335;"><strong id="msg">Click "Start" to play</strong></p>                      
+                  </div>                   
+                  </div>
+              </div>
+              <div class="well col-md-12 hide" id="hide">
+                <ul class="list-unstyled" style="line-height: 2; display: inline;">
+                    <div class="col-md-4"><li class="inline"><span class="text-success" id="startResult"></span></li></div>
+                    <div class="col-md-4"><li class="inline"><span class="text-success" id="stopResult"></span></li></div>
+                    <div class="col-md-4"><li class="inline"><span class="text-success" id="minuteResult"></span></li></div>
+                    <div class="col-md-4"><li class="inline"><span class="text-success" id="payResult"></span></li></div>
+                </ul>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <input type="button" class="btn btn-lg btn-warning" value="Start" id="btn" onclick="start()" style="width: 100%">
+          </div>
+      </div>
+    </div>
+</body>
+</html>
